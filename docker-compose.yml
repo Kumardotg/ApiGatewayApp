@@ -1,0 +1,20 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+version: '3.4'
+
+services:
+  gatewayapi:
+    image: gatewayapi
+    build:
+      context: .
+      dockerfile: Gateway.Api/Dockerfile
+    ports:
+      - 5065:5065
+
+  weatherapi:
+    image: weatherapi
+    build:
+      context: .
+      dockerfile: weather.api/Dockerfile
+    ports:
+      - 5015:5015
