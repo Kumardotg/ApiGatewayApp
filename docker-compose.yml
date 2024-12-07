@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: Gateway.Api/Dockerfile
     ports:
-      - 5065:5065
+      - 5085:5085
 
   weatherapi:
     image: weatherapi
@@ -17,4 +17,4 @@ services:
       context: .
       dockerfile: weather.api/Dockerfile
     ports:
-      - 5015:5015
+      - 5025:5025

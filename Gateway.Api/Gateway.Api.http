@@ -1,6 +1,22 @@
-@Gateway.Api_HostAddress = http://localhost:5015
+@baseUrl = http://localhost:5085
 
-GET {{Gateway.Api_HostAddress}}/weatherforecast/
+Get {{baseUrl}}/login?firstApi=true
 Accept: application/json
 
 ###
+GET {{baseUrl}}/WeatherForecast/PP/weatherforecast
+Accept: application/json
+Authorization: Bearer CfDJ8DlGRX4W319GqrvHY04EhmwrpRqRrmqHEdDX1fo3ObyPXlYsz3O7jLcKQzpHijhLLwCGGNK0DqLAxOueJ6YEyzwcww1SYcAt3GAOimpJ-fEgp_mfSrnXZyH2D8zh_9Wjg3hXkH42H1QFUjaefXczjoAVHbjkcrZ9MSshC72Pnnvz0L-Mm7Vu-KzCuTLVMb67AOlQ9ObyURJFynl2mLQK5cG3S0g4vCSLLaLJ9zMYgKNLfXWPvFiIE7R_3CpOcooSO3XwklmX-FpU2xU8PutkHqV-95q1KBPkVkvh364AWjLPrDo1RdHJ4iI3m3vuSJKAm-V2-sUrmVN8C8cGESZe3-tHyKg_0HtWip-54c838xRh
+
+###
+
+POST {{baseUrl}}/weatherservice/weatherforecast
+Accept: application/json
+Content-Type: application/json
+
+{
+    "guid": "95ff2229-788a-4c51-a4aa-ac75fddf2395",
+    "date": "2024-12-03",
+    "temperatureC": 14,
+    "summary": "Tes51"
+  }
